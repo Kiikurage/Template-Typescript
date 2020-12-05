@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = {
     root: true,
-    parser: '@typescript-eslint/parser',
     plugins: ['prettier', 'react', 'react-hooks', 'import'],
     extends: [
         'eslint:recommended',
@@ -14,7 +13,7 @@ module.exports = {
     ],
     env: {
         es6: true,
-        node: true,
+        node: false,
     },
     ignorePatterns: ['./node_modules', './package.json', './package-lock.json'],
     rules: {
@@ -39,6 +38,7 @@ module.exports = {
         {
             files: ['*.ts', '*.tsx'],
             plugins: ['@typescript-eslint'],
+            parser: '@typescript-eslint/parser',
             parserOptions: {
                 tsconfigRootDir: __dirname,
                 project: [path.resolve(__dirname, './tsconfig.json')],
@@ -58,7 +58,7 @@ module.exports = {
                     'error',
                     {
                         selector: 'TSEnumDeclaration',
-                        message: "Don't declare enums. Use union type instead.",
+                        message: "Don't use enums. Use union type instead.",
                     },
                 ],
             },
