@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     root: true,
-    plugins: ['prettier', 'react', 'react-hooks', 'import', 'sonarjs'],
+    plugins: ['prettier', 'react', 'react-hooks', 'import'],
     extends: [
         'eslint:recommended',
         'plugin:prettier/recommended',
@@ -10,7 +10,6 @@ module.exports = {
         'plugin:react-hooks/recommended',
         'plugin:import/errors',
         'plugin:import/warnings',
-        'plugin:sonarjs/recommended',
     ],
     env: {
         es6: true,
@@ -65,7 +64,7 @@ module.exports = {
             },
         },
         {
-            files: ['.eslintrc.js', 'webpack.config.js'],
+            files: ['.eslintrc.js', 'webpack.config.js', 'babel.config.js'],
             env: {
                 node: true,
             },
