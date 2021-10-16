@@ -64,7 +64,7 @@ module.exports = {
             },
         },
         {
-            files: ['.eslintrc.js', 'webpack.config.js', 'babel.config.js'],
+            files: ['.eslintrc.js', 'webpack.config.js', 'babel.config.js', '.prettierrc.js', 'jest.config.js'],
             env: {
                 node: true,
             },

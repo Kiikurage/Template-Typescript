@@ -23,30 +23,12 @@ module.exports = {
                 test: /\.tsx?$/,
                 use: [
                     {
-                        loader: 'ts-loader',
-                        options: {
-                            transpileOnly: true,
-                            configFile: path.resolve(__dirname, './tsconfig.json'),
-                        },
-                    },
-                ],
-            },
-            {
-                test: /\.svg$/,
-                use: [
-                    {
                         loader: 'babel-loader',
                     },
-                    {
-                        loader: 'react-svg-loader',
-                        options: {
-                            jsx: true,
-                        },
-                    },
                 ],
             },
             {
-                test: /\.(png|jpg|jpeg|gif|ico)$/,
+                test: /\.(svg|png|jpg|jpeg|gif|ico)$/,
                 use: [{ loader: 'file-loader' }],
             },
         ],
