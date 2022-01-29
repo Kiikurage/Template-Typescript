@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     root: true,
-    plugins: ['prettier', 'react', 'react-hooks', 'import'],
+    plugins: ['prettier', 'react', 'react-hooks', 'import', '@emotion'],
     extends: [
         'eslint:recommended',
         'plugin:prettier/recommended',
@@ -33,6 +33,7 @@ module.exports = {
         'react/jsx-uses-vars': 'error',
         'react/react-in-jsx-scope': 'error',
         'react-hooks/exhaustive-deps': 'error',
+        '@emotion/jsx-import': 'off', // Babel plugin is used instead
     },
     overrides: [
         {
