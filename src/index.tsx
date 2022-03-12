@@ -1,20 +1,7 @@
-import { css } from '@emotion/css';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { App } from './App';
 
 window.addEventListener('DOMContentLoaded', () => {
-    ReactDOM.render(
-        <div
-            className={css`
-                background: #f00;
-
-                &:hover {
-                    background: #00f;
-                }
-            `}
-        >
-            Hello World
-        </div>,
-        document.getElementById('root')
-    );
+    ReactDOM.render(<App />, document.getElementById('root'));
 });
