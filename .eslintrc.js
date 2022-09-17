@@ -31,7 +31,8 @@ module.exports = {
         ],
         'react/jsx-uses-react': 'error',
         'react/jsx-uses-vars': 'error',
-        'react/react-in-jsx-scope': 'error',
+        'react/react-in-jsx-scope': 'off',
+        'react/no-unknown-property': ['error', { ignore: ['css'] }],
         'react-hooks/exhaustive-deps': 'error',
         '@emotion/jsx-import': 'off', // Babel plugin is used instead
     },

@@ -1,14 +1,14 @@
 import { css } from '@emotion/react';
 import { FC } from 'react';
+import { Outlet } from 'react-router-dom';
 
-export const MainPage: FC = () => (
+export const AppShell: FC = () => (
     <div
         css={css`
-            position: absolute;
+            position: fixed;
             inset: 0;
-            background: #fff;
         `}
     >
-        Hello World
+        <Outlet />
     </div>
 );

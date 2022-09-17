@@ -17,13 +17,18 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
         modules: [path.resolve(__dirname, './src'), path.resolve(__dirname, './node_modules')],
     },
+    devtool: 'eval-source-map',
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
+                exclude: /node_modules/,
                 use: [
                     {
                         loader: 'babel-loader',
+                        options: {
+                            cacheDirectory: true,
+                        },
                     },
                 ],
             },
