@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const { ESBuildMinifyPlugin } = require('esbuild-loader');
 
 module.exports = {
     cache: true,
@@ -25,10 +26,7 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     {
-                        loader: 'babel-loader',
-                        options: {
-                            cacheDirectory: true,
-                        },
+                        loader: 'swc-loader',
                     },
                 ],
             },
@@ -40,6 +38,13 @@ module.exports = {
     },
     devServer: {
         port: 3001,
+    },
+    optimization: {
+        minimizer: [
+            new ESBuildMinifyPlugin({
+                target: 'es2015',
+            }),
+        ],
     },
     plugins: [
         new HtmlWebpackPlugin({
