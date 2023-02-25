@@ -1,75 +1,26 @@
-const path = require('path');
-
 module.exports = {
-    root: true,
-    plugins: ['prettier', 'react', 'react-hooks', 'import', '@emotion'],
     extends: [
         'eslint:recommended',
-        'plugin:prettier/recommended',
-        'plugin:react/recommended',
-        'plugin:react-hooks/recommended',
-        'plugin:import/errors',
-        'plugin:import/warnings',
+        'plugin:@typescript-eslint/recommended',
+        'prettier',
     ],
-    env: {
-        es6: true,
-        node: false,
-    },
-    ignorePatterns: ['./node_modules', './package.json', './package-lock.json'],
+    parser: '@typescript-eslint/parser',
+    plugins: ['@typescript-eslint'],
+    root: true,
     rules: {
-        'no-inner-declarations': 'off',
-        'semi': 'error',
-        'space-infix-ops': 'error',
-        'prettier/prettier': [
-            'error',
-            {
-                tabWidth: 4,
-                singleQuote: true,
-                printWidth: 140,
-                quoteProps: 'consistent',
-            },
-        ],
-        'react/jsx-uses-react': 'error',
-        'react/jsx-uses-vars': 'error',
-        'react/react-in-jsx-scope': 'off',
-        'react/no-unknown-property': ['error', { ignore: ['css'] }],
-        'react-hooks/exhaustive-deps': 'error',
-        '@emotion/jsx-import': 'off', // Babel plugin is used instead
+        '@typescript-eslint/prefer-namespace-keyword': 'off',
+        '@typescript-eslint/no-namespace': 'off',
     },
     overrides: [
         {
-            files: ['*.ts', '*.tsx'],
-            plugins: ['@typescript-eslint'],
-            parser: '@typescript-eslint/parser',
-            parserOptions: {
-                tsconfigRootDir: __dirname,
-                project: [path.resolve(__dirname, './tsconfig.json')],
-            },
-            extends: [
-                'plugin:@typescript-eslint/recommended',
-                'plugin:@typescript-eslint/recommended-requiring-type-checking',
-                'plugin:import/typescript',
+            files: [
+                '**/.eslintrc.js',
+                '**/babel.config.js',
+                '**/webpack.config.js',
             ],
+            env: { node: true },
             rules: {
-                '@typescript-eslint/no-empty-interface': 'off',
-                '@typescript-eslint/explicit-function-return-type': 'off',
-                '@typescript-eslint/no-use-before-define': 'off',
-                '@typescript-eslint/no-enum': 'off',
-                '@typescript-eslint/no-namespace': 'off',
-                '@typescript-eslint/no-non-null-assertion': 'error',
-                'no-restricted-syntax': [
-                    'error',
-                    {
-                        selector: 'TSEnumDeclaration',
-                        message: "Don't use enums. Use union type instead.",
-                    },
-                ],
-            },
-        },
-        {
-            files: ['.eslintrc.js', 'webpack.config.js', 'babel.config.js', '.prettierrc.js', 'jest.config.js'],
-            env: {
-                node: true,
+                '@typescript-eslint/no-var-requires': 'off',
             },
         },
     ],

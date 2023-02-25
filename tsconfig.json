@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
+    "target": "ES2020",
     "strict": true,
-    "lib": [
-      "ES2020",
-      "DOM"
-    ],
-    "jsx": "react-jsx",
-    "jsxImportSource": "@emotion/react"
-  }
+    "sourceMap": true,
+    "moduleResolution": "node"
+  },
+  "exclude": [
+    "**/*.test.*"
+  ]
 }

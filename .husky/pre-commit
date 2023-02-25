@@ -1,9 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-echo "Verify TS typings..."
-$(npm bin)/tsc --noEmit
-echo "OK\n"
-
-npx lint-staged
-npm test
