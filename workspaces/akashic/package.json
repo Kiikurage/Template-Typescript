@@ -11,7 +11,7 @@
     "lint": "run-s lint:eslint lint:prettier",
     "lint:eslint": "eslint --fix src/**/* --max-warnings=0",
     "lint:prettier": "prettier -w ./src/**/*",
-    "export-zip": "rimraf game.zip && akashic-cli-export zip -o game.zip -s",
+    "export-zip": "rimraf game.zip && akashic-cli-export zip -o game.zip --no-es5-downpile --nicolive",
     "export-html": "rimraf game && akashic-cli-export html -o game",
     "test": "jest"
   },
