@@ -1,8 +1,9 @@
 name: Quality check
 
 on:
-  push:
-    branches: [ "**" ]
+  pull_request:
+    branches:
+      - "**"
   workflow_dispatch:
 
 permissions:
@@ -11,11 +12,11 @@ permissions:
   id-token: write
 
 concurrency:
-  group: ${{ github.ref }}
+  group: quality-check-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  akashic-build-zip:
+  check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
