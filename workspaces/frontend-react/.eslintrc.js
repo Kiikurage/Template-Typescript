@@ -1,3 +1,3 @@
 module.exports = {
-    ...require('../../.eslintrc'),
+    extends: ['../../.eslintrc.js'],
 };

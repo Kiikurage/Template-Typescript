@@ -5,7 +5,7 @@ import { useCreateUser, useDeleteUser, useUsersList } from '../api/hooks/userHoo
 
 export const Page2: FC = () => {
     const [newUserName, setNewUserName] = useState('');
-    const [offset, setOffset] = useState(0);
+    const [offset] = useState(0);
     const { data: users } = useUsersList({ offset, size: 10 });
     const createUser = useCreateUser();
     const deleteUser = useDeleteUser();

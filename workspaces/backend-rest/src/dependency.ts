@@ -6,10 +6,6 @@ import { UserStorage } from './storage/UserStorage';
 
 export const getApp = singleton(() => createApp(getUserService()));
 
-export const getUserService = singleton(
-    () => new UserService(getUserStorage())
-);
+export const getUserService = singleton(() => new UserService(getUserStorage()));
 
-export const getUserStorage = singleton<UserStorage>(
-    () => new MemoryUserStorage()
-);
+export const getUserStorage = singleton<UserStorage>(() => new MemoryUserStorage());
