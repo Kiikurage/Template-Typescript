@@ -2,7 +2,6 @@
   "name": "frontend-react",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "webpack-cli serve",
     "build": "webpack-cli bundle ",
@@ -16,11 +15,6 @@
     "lint": "run-s lint:eslint lint:prettier",
     "lint:eslint": "eslint -c .eslintrc.js --max-warnings 0 ./**/*.{ts,tsx,js,jsx}",
     "lint:prettier": "prettier -w ./**/*.{ts,tsx,js,jsx}"
-
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kiikurage/Template-React-Typescript.git"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.5",

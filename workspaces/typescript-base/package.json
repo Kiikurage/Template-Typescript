@@ -2,7 +2,7 @@
   "name": "typescript-base",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
     "start": "ts-node ./src/index.ts",
     "build": "tsc",
@@ -11,11 +11,10 @@
     "test": "jest",
     "lint": "run-s lint:eslint lint:prettier",
     "lint:eslint": "eslint -c .eslintrc.js --max-warnings 0 ./**/*.{ts,tsx,js,jsx}",
-    "lint:prettier": "prettier -w ./**/*.{ts,tsx,js,jsx}"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kiikurage/Template-React-Typescript.git"
+    "lint:prettier": "prettier ./**/*.{ts,tsx,js,jsx} -c",
+    "lint:fix": "run-s lint:fix:eslint lint:fix:prettier",
+    "lint:fix:eslint": "npm run lint:eslint -- --fix",
+    "lint:fix:prettier": "npm run lint:prettier -- -w"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.5",

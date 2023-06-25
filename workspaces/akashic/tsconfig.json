@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": ["es5"],
+    "outDir": "script",
+    "allowUmdGlobalAccess": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "types/global.d.ts"
+  ]
+}
