@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "strict": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "lib": [],
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true
+  }
+}

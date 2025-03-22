@@ -1,0 +1,32 @@
+{
+    "linter": {
+        "rules": {
+            "complexity": {
+                "noBannedTypes": "off",
+                "noStaticOnlyClass": "off",
+                "noUselessLoneBlockStatements": "off",
+                "noUselessSwitchCase": "off",
+                "useArrowFunction": "off"
+            },
+            "a11y": {
+                "noSvgWithoutTitle": "off",
+                "useKeyWithClickEvents": "off",
+                "noAutofocus": "off"
+            },
+            "style": {
+                "noParameterAssign": "off",
+                "noUselessElse": "off",
+                "noArguments": "off"
+            },
+            "suspicious": {
+                "noArrayIndexKey": "off",
+                "noAssignInExpressions": "off",
+                "noEmptyInterface": "off",
+                "noConfusingVoidType": "off"
+            },
+            "performance": {
+                "noDelete": "off"
+            }
+        }
+    }
+}

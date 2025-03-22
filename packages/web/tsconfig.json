@@ -1,0 +1,11 @@
+{
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"lib": ["DOM", "ES2020"],
+		"outDir": "./build",
+		"jsx": "react-jsx",
+		"jsxImportSource": "@emotion/react"
+	},
+	"include": ["./src/**/*", "@dserver/common"],
+	"exclude": ["**/*.test.*", "./src/scripts/**/*"]
+}

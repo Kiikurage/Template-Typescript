@@ -1,0 +1,14 @@
+{
+	"name": "app",
+	"version": "1.0.0",
+	"description": "",
+	"workspaces": ["packages/*"],
+	"scripts": {
+		"dev": "bun run --filter='@app/*' --elide-lines=0 dev",
+		"build": "bun run --filter='@app/*' build",
+		"prebuild": "bun run --filter='@app/*' prebuild",
+		"clean": "bun run --filter='@app/*' clean",
+		"lint": "bun run --filter='@app/*' lint",
+		"check": "bun run --filter='@app/*' check"
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"lib": ["DOM", "ES2020"],
+		"module": "esnext",
+		"outDir": "./build"
+	},
+	"include": ["./src/**/*", "@dserver/common", "types"],
+	"exclude": ["**/*.test.*", "./src/scripts/**/*"]
+}
